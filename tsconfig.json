@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "strict": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["src/types"],
+    "types": ["node", "@types/jest"],
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "noEmit": true,
+    "allowJs": false,
+    "paths": {
+      "@src/*": ["src/*"],
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts","js"]
+      }
+    }
+  },
+  "include": [
+	"src/*.ts",
+  "tests/*.ts"
+  ],
+  "exclude": ["node_modules","example"]
+}
