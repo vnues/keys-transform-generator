@@ -13,12 +13,8 @@ export default [
     output: {
       file: 'dist/index.js',
       format: 'umd',
-      name: 'vuexSetupHelpers',
+      name: 'keysTransform',
       sourcemap: false,
-      globals: {
-        vue: 'Vue',
-        vuex: 'Vuex',
-      },
     },
     plugins: [
       babel({
@@ -33,7 +29,6 @@ export default [
       commonjs(),
       terser(),
     ],
-    external: ['vue', 'vuex'],
   },
   {
     input: 'src/index.ts',

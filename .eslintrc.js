@@ -1,18 +1,17 @@
 module.exports = {
-  extends: ['alloy', 'alloy/react', 'alloy/typescript'],
+  extends: ['alloy', 'alloy/typescript'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ['jest'],
   env: {
-    jest: true
+    jest: true,
   },
   rules: {
-    indent: ['error', 2],
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-var-requires': 'off',
@@ -27,11 +26,12 @@ module.exports = {
     '@typescript-eslint/no-require-imports': 'off',
     '@typescript-eslint/prefer-optional-chain': 'off',
     'max-params': 'off',
+    'no-param-reassign': 'off',
     'no-trailing-spaces': [
       'error',
       {
-        skipBlankLines: true
-      }
-    ]
-  }
-}
+        skipBlankLines: true,
+      },
+    ],
+  },
+};
