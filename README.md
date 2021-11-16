@@ -31,7 +31,7 @@ const snakecaseData = snakecaseKeys<typeof data, typeof options>(data, options);
 
 ## Typescript Utils
 
-### SnakeCasedDeep<T>
+### `SnakeCasedDeep<T>`
 
 > 将接口的驼峰 key 转化为下划线
 
@@ -41,7 +41,7 @@ import { SnakeCasedDeep } from '@src/index';
 type RequestData = SnakeCasedDeep<DefaultRequestData>;
 ```
 
-### CamelCasedDeep<T>
+### `CamelCasedDeep<T>`
 
 > 将接口的下划线 key 转化为驼峰
 
