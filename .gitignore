@@ -13,3 +13,4 @@ docs
 .cache
 typings
 es
+lib
