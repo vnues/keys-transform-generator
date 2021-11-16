@@ -23,7 +23,7 @@ jobs:
     <<: *defaults
     steps:
       - add_ssh_keys:
-          fingerprints: '97:8a:d8:bb:eb:e9:22:7a:22:13:a9:df:8d:9e:17:24'
+          fingerprints: 'b9:ef:45:6e:fc:1b:03:f8:3c:56:48:d0:d7:59:fe:ea'
       - attach_workspace:
           at: ~/repo
       - restore_cache:
@@ -38,14 +38,14 @@ jobs:
       - run: npm run build
       # - run: npm run start
       - run: ls -al
-      - run: # git push
-          name: push-github
-          command: |
-            git config --global user.email "1518190293@qq.com"
-            git config --global user.name "vnues"
-            git add -f docs
-            git commit -m 'feat: create docs'
-            git push origin `git subtree split --prefix docs/dist master`:gh-pages --force
+      # - run: # git push
+      #     name: push-github
+      #     command: |
+      #       git config --global user.email "1518190293@qq.com"
+      #       git config --global user.name "vnues"
+      #       git add -f docs
+      #       git commit -m 'feat: create docs'
+      #       git push origin `git subtree split --prefix docs/dist master`:gh-pages --force
       - save_cache:
           paths:
             - node_modules
