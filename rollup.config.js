@@ -13,7 +13,7 @@ export default [
     output: {
       file: 'dist/index.js',
       format: 'umd',
-      name: 'keysTransform',
+      name: 'keysTransformGenerator',
       sourcemap: false,
     },
     plugins: [
@@ -28,6 +28,26 @@ export default [
       }),
       commonjs(),
       terser(),
+    ],
+  },
+  {
+    input: 'src/index.ts',
+    output: {
+      file: 'lib/index.js',
+      format: 'cjs',
+      sourcemap: false,
+    },
+    plugins: [
+      babel({
+        exclude: 'node_modules/**',
+        extensions,
+        babelHelpers: 'runtime',
+      }),
+      nodeResolve({ browser: true, extensions }),
+      typescriptPaths({
+        preserveExtensions: true,
+      }),
+      commonjs(),
     ],
   },
   {
@@ -49,7 +69,6 @@ export default [
       }),
       commonjs(),
     ],
-    external: ['vue', 'vuex'],
   },
   {
     input: 'src/index.ts',

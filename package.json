@@ -1,13 +1,13 @@
 {
-  "name": "keys-transform",
+  "name": "keys-transform-generator",
   "version": "0.0.0",
   "description": "keys transform",
   "author": "vnues",
   "license": "MIT",
   "keywords": [
-   "camelcase",
-   "snakecase",
-   "keys transform"
+    "camelcase",
+    "snakecase",
+    "keys transform"
   ],
   "files": [
     "dist",
@@ -29,12 +29,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:vnues/keys-transform.git"
+    "url": "git@github.com:vnues/keys-transform-generator.git"
   },
   "bugs": {
-    "url": "git@github.com:vnues/keys-transform.git"
+    "url": "https://github.com/vnues/keys-transform-generator"
   },
-  "homepage": "git@github.com:vnues/keys-transform.git",
+  "homepage": "https://github.com/vnues/keys-transform-generator",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
@@ -57,7 +57,6 @@
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
-    "jest": "^25.3.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
@@ -67,7 +66,8 @@
     "rollup-plugin-typescript-paths": "^1.3.0",
     "standard-version": "^9.3.1",
     "type-fest": "^2.5.3",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "jest": "^25.3.0"
   },
   "dependencies": {
     "camelcase": "^6.2.0",

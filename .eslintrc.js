@@ -19,8 +19,6 @@ module.exports = {
     '@typescript-eslint/typedef': 'off',
     'no-new-func': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
-    'eol-last': 2,
-    quotes: [2, 'single'],
     complexity: 'off',
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-require-imports': 'off',
