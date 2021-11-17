@@ -62,6 +62,9 @@ jobs:
             git config --global user.email "1518190293@qq.com"
             git config --global user.name "vnues"
       - run: npm run release
+      - run:
+          name: Add github.com to known hosts
+          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run: # git push
           name: push-github
           command: |
