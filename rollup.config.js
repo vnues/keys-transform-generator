@@ -49,6 +49,7 @@ export default [
       }),
       commonjs(),
     ],
+    external: ['map-obj', 'camelcase', 'snake-case'],
   },
   {
     input: 'src/index.ts',
@@ -69,6 +70,7 @@ export default [
       }),
       commonjs(),
     ],
+    external: ['map-obj', 'camelcase', 'snake-case'],
   },
   {
     input: 'src/index.ts',
