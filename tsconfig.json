@@ -3,6 +3,7 @@
     "baseUrl": "./",
     "strict": true,
     "lib": ["esnext"],
+    "typeRoots": ["src/types"],
     "types": ["node", "@types/jest"],
     "target": "esnext",
     "module": "esnext",
