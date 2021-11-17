@@ -83,20 +83,25 @@ workflows:
       - test:
           filters:
             tags:
-              only: /.*/
+              only: 
+                /.*/
       - build:
           requires:
             - test
           filters:
             tags:
-              only: /.*/
-      # - deploy:
-      #     requires:
-      #       - build
-      #     filters:
-      #       tags:
-      #         only:
-      #           - /^v.*/
-      #       branches:
-      #         only:
-      #           master
+              only: 
+                /.*/
+          branches:
+              only:
+                master
+      - deploy:
+          requires:
+            - build
+          filters:
+            tags:
+              only:
+                - /^v.*/
+            branches:
+              ignore:
+                /.*/
