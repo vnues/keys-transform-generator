@@ -56,7 +56,7 @@ jobs:
             - v1-dependencies-
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
       - run: ls -al
-      - run: npm release
+      - run: npm run release
       - run: # git push
           name: push-github
           command: |
