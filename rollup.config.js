@@ -79,7 +79,7 @@ export default [
       typescriptPaths({
         preserveExtensions: true,
       }),
-      dts(),
+      dts({ respectExternal: ['type-fest'] }),
     ],
   },
 ];
